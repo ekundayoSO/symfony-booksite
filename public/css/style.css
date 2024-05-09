@@ -1,0 +1,21 @@
+.custom-width {
+    width: 600px;
+}
+
+.position {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.position-a {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    padding: 0 6px;
+    border-radius: 6px;
+    background-color: rgb(109, 109, 247);
+    color: #fff;
+}
