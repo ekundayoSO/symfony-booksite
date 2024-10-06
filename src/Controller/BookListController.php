@@ -61,7 +61,8 @@ class BookListController extends AbstractController
         ]);
     }
 
-    #[Route("/{id}", name: "book_delete", methods: ["DELETE"])]
+    // Although POST should be DELETE, but deleting in Symfony requires POST instead of DELETE
+    #[Route("/{id}", name: "book_delete", methods: ["POST"])]
     public function delete(Request $request, Book $book, ManagerRegistry $doctrine): Response
     {
         if ($this->isCsrfTokenValid("delete" . $book->getId(), $request->request->get("_token"))) {
